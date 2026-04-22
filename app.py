@@ -1,4 +1,4 @@
- from flask import Flask
+from flask import Flask
 import os
 
 app = Flask(__name__)
@@ -38,13 +38,9 @@ body {
     padding:60px 20px;
     text-align:center;
     background:linear-gradient(135deg,#0d47a1,#d32f2f);
+    animation:fade 1s ease-in;
 }
-.hero img {
-    width:90%;
-    max-width:500px;
-    border-radius:12px;
-    margin-bottom:20px;
-}
+@keyframes fade {from{opacity:0;} to{opacity:1;}}
 
 /* BUTTONS */
 .btn {
@@ -58,7 +54,7 @@ body {
 .call {background:white;color:#d32f2f;}
 .whatsapp {background:#25D366;color:white;}
 
-/* SECTIONS */
+/* SERVICES */
 .section {padding:40px 20px;text-align:center;}
 
 .grid {
@@ -74,7 +70,9 @@ body {
     backdrop-filter:blur(10px);
     transition:0.3s;
 }
-.card:hover {transform:scale(1.05);}
+.card:hover {
+    transform:translateY(-8px);
+}
 
 /* FLOAT BUTTON */
 .float {
@@ -86,11 +84,14 @@ body {
     padding:15px;
     border-radius:50%;
     text-decoration:none;
-    font-size:20px;
 }
 
-/* MAP */
-iframe {width:100%;border:0;height:250px;border-radius:10px;}
+/* FOOTER */
+.footer {
+    text-align:center;
+    padding:15px;
+    opacity:0.6;
+}
 </style>
 
 </head>
@@ -107,39 +108,38 @@ iframe {width:100%;border:0;height:250px;border-radius:10px;}
 </div>
 
 <div class="hero">
-<img src="https://via.placeholder.com/500x200.png?text=Dr+Mobile+Banner">
 <h1>Dr. Mobile’s Clinic</h1>
-<p>Premium Mobile Repair & Service</p>
+<p>Expert Care for Every Mobile Problem</p>
 
-<a href="tel:7010861125" class="btn call">📞 Call</a>
+<a href="tel:7010861125" class="btn call">📞 Call Now</a>
 <a href="https://wa.me/917010861125" class="btn whatsapp">💬 WhatsApp</a>
 </div>
 
 <div class="section">
-<h2>Services</h2>
+<h2>Our Premium Services</h2>
 <div class="grid">
-<div class="card">📱 Display Repair</div>
-<div class="card">🔋 Battery Replace</div>
-<div class="card">🧠 Chip Repair</div>
-<div class="card">⚙ Full Service</div>
-<div class="card">💧 Water Damage</div>
-<div class="card">🔌 Charging Issue</div>
+<div class="card">📱 Display Replacement</div>
+<div class="card">🔋 Battery Replacement</div>
+<div class="card">🧠 Chip-Level Repair</div>
+<div class="card">⚙ Full Mobile Service</div>
+<div class="card">💧 Water Damage Repair</div>
+<div class="card">🔌 Charging Port Fix</div>
 </div>
 </div>
 
 <div class="section">
 <h2>Why Choose Us</h2>
 <p>⚡ Fast Service</p>
-<p>💰 Best Price</p>
+<p>💰 Affordable Price</p>
 <p>👨‍🔧 Expert Technicians</p>
-</div>
-
-<div class="section">
-<h2>Location</h2>
-<iframe src="https://maps.google.com/maps?q=Mangadu%20Chennai&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+<p>⭐ Trusted by Customers</p>
 </div>
 
 <a href="https://wa.me/917010861125" class="float">💬</a>
+
+<div class="footer">
+© Dr. Mobile’s Clinic
+</div>
 
 </body>
 </html>
